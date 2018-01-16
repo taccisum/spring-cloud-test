@@ -1,0 +1,14 @@
+eureka:
+  instance:
+    hostname: localhost #指定该eureka实例的主机名
+  client:
+    #这两个配置标识是否将本应用也作为一个微服务注册
+    registerWithEureka: false
+    fetchRegistry: false
+    #
+    serviceUrl:
+     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+server:
+  port: 10001 #应用启动使用的端口号，为0则随机分配一个端口号

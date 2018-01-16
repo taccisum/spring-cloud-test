@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: simple-client
+eureka:
+  instance:
+      hostname: localhost
+  client:
+    serviceUrl:
+     defaultZone: http://localhost:10001/eureka/ #注册中心url
+server:
+  port: 20001
