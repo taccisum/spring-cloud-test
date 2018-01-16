@@ -12,6 +12,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 public class ConfigCenterApplication {
     public static void main(String[] args) {
+        //启动后访问http://tac.config.com:{port}/master/helloworld-dev.yml可以查看到示例的配置文件
         SpringApplication.run(ConfigCenterApplication.class, args);
     }
 }
