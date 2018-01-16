@@ -13,6 +13,14 @@
     <packaging>pom</packaging>
     <modules>
         <module>simple-client</module>
+        <module>manual-client</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
