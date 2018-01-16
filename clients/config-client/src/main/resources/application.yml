@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-client
+server:
+  port: 20003
+eureka:
+  instance:
+      hostname: localhost
+  client:
+    serviceUrl:
+     defaultZone: http://tac.eureka.com:10001/eureka/ #注册中心url，如果是部署在内网，一般通过修改hosts文件与ip进行解耦
