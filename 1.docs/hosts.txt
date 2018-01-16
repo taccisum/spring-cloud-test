@@ -1,0 +1,5 @@
+# 将以下文本添加到hosts文件中
+# spring cloud test hosts start
+127.0.0.1 tac.eureka.com
+127.0.0.1 tac.config.com
+# spring cloud test hosts end
