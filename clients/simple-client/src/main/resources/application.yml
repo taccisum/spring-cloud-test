@@ -1,6 +1,11 @@
 spring:
   application:
     name: simple-client
+# 禁用自动注册
+#  cloud:
+#    service-registry:
+#      auto-registration:
+#        enabled: false
 eureka:
   instance:
       hostname: localhost
