@@ -6,4 +6,8 @@ spring:
       server:
         git:
           uri: https://gitee.com/taccisum/spring-cloud-test-config-center.git
+#          如果需要认证，通过以下两项配置
+#          如果使用ssh，则需要在~/.ssh中存储私钥文件（或者使用yml配置）
+#          username:
+#          password:
           clone-on-start: true
