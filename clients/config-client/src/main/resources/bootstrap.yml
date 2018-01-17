@@ -1,8 +1,11 @@
 spring:
   application:
     name: config-client
+  profiles:
+    active: dev
   cloud:
     config:
       uri: http://tac.config.com:10002
       label: master
-      profile: dev
+
+author: anit  # 配置中心的配置优先级最高，这个配置项将失效
