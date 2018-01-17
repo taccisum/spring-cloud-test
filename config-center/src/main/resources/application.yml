@@ -11,3 +11,4 @@ spring:
 #          username:
 #          password:
           clone-on-start: true
+#          force-pull: true # 本地仓库内容被修改导致无法pull时，可以启用force pull来解决这个问题

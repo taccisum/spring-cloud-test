@@ -8,4 +8,4 @@ spring:
       uri: http://tac.config.com:10002
       label: master
 
-author: anit  # 配置中心的配置优先级最高，这个配置项将失效
+author: anit  # 配置中心的配置优先级最高，无法被覆盖
