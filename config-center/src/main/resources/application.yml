@@ -1,6 +1,8 @@
 server:
   port: 10002
 spring:
+  application:
+    name: config-center
   cloud:
     config:
       server:
@@ -16,3 +18,9 @@ spring:
 #        overrides指定的配置项能被所有应用继承，但不会被任何其它应用修改
           version: 0.x
 
+eureka:
+  instance:
+      hostname: localhost
+  client:
+    serviceUrl:
+     defaultZone: http://tac.eureka.com:10001/eureka/ #注册中心url，如果是部署在内网，一般通过修改hosts文件与ip进行解耦

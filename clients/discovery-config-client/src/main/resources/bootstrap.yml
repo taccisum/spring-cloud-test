@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: discovery-config-client
+  profiles:
+    active: dev
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-center   # 指定配置服务器的服务名
+
+eureka:
+  instance:
+      hostname: localhost
+  client:
+    serviceUrl:
+     defaultZone: http://tac.eureka.com:10001/eureka/
