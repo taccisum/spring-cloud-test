@@ -12,3 +12,7 @@ spring:
 #          password:
           clone-on-start: true
 #          force-pull: true # 本地仓库内容被修改导致无法pull时，可以启用force pull来解决这个问题
+        overrides:
+#        overrides指定的配置项能被所有应用继承，但不会被任何其它应用修改
+          version: 0.x
+
