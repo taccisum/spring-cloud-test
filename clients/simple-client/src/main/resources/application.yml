@@ -10,5 +10,9 @@ eureka:
   client:
     serviceUrl:
      defaultZone: http://tac.eureka.com:10001/eureka/ #注册中心url，如果是部署在内网，一般通过修改hosts文件与ip进行解耦
+#  通过instance可以指定服务实例的一些信息
+  instance:
+    hostname: localhost
+    instance-id: simple-client:${server.port}
 server:
   port: 20001
