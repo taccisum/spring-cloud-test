@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: using-client
+
+server:
+  port: 20005
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://tac.eureka.com:10001/eureka/
+

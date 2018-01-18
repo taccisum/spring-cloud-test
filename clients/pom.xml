@@ -16,6 +16,7 @@
         <module>manual-client</module>
         <module>config-client</module>
         <module>discovery-config-client</module>
+        <module>using-client</module>
     </modules>
 
     <dependencies>
