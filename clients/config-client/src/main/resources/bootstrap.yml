@@ -7,5 +7,9 @@ spring:
     config:
       uri: http://tac.config.com:10002
       label: master
+    service-registry:
+      auto-registration:
+        enabled: false
 
 author: anit  # 配置中心的配置优先级最高，无法被覆盖
+

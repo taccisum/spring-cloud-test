@@ -35,4 +35,9 @@ public class ConfigClientApplication {
     public String greeting() {
         return environment.getProperty("greeting");
     }
+
+    @GetMapping("version")
+    public String version() {
+        return environment.getProperty("version");
+    }
 }
