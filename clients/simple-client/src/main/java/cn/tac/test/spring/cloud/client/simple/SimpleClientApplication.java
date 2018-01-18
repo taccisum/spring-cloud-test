@@ -9,7 +9,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @since 16/01/2018
  */
 @SpringBootApplication
-@EnableDiscoveryClient()
+@EnableDiscoveryClient
 //@EnableDiscoveryClient(autoRegister = false)  //禁止注册到服务注册中心
 public class SimpleClientApplication {
     public static void main(String[] args) {
