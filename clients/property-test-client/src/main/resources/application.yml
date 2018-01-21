@@ -1,0 +1,15 @@
+eureka:
+  client:
+    service-url:
+     defaultZone: http://tac.eureka.com:10001/eureka/ #注册中心url，如果是部署在内网，一般通过修改hosts文件与ip进行解耦
+
+---
+spring:
+  application:
+    name: prefer-ip-client
+  profiles: prefer-ip
+eureka:
+  instance:
+    prefer-ip-address: true
+server:
+  port: 20005

@@ -17,6 +17,7 @@
         <module>config-client</module>
         <module>discovery-config-client</module>
         <module>using-client</module>
+        <module>property-test-client</module>
     </modules>
 
     <dependencies>
