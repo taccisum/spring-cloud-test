@@ -12,6 +12,8 @@
         <module>eureka</module>
         <module>clients</module>
         <module>config-center</module>
+        <module>eureka-peer2</module>
+        <module>eureka-peer1</module>
     </modules>
 
     <parent>

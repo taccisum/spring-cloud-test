@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka-peer2
+server:
+  port: 10004
+eureka:
+  client:
+    service-url:
+      defaultZone: http://tac.eureka.peer1.com:10003

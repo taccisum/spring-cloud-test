@@ -2,4 +2,6 @@
 # spring cloud test hosts start
 127.0.0.1 tac.eureka.com
 127.0.0.1 tac.config.com
+127.0.0.1 tac.eureka.peer1.com
+127.0.0.1 tac.eureka.peer2.com
 # spring cloud test hosts end
