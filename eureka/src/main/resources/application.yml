@@ -2,9 +2,9 @@ eureka:
   instance:
     hostname: localhost #指定该eureka实例的主机名
   client:
-    #这两个配置标识是否将本应用也作为一个微服务注册
-    registerWithEureka: false
-    fetchRegistry: false
+    # 这两个配置标识是否将本应用也作为一个服务注册
+    registerWithEureka: true
+    fetchRegistry: true
     #
     serviceUrl:
      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
