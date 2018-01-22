@@ -25,22 +25,26 @@ public class SimpleHystrixApplication {
                 .run(args);
     }
 
-    private static int i = 0;
+    private static int successCount = 0;
+    private static int errorCount = 0;
+    private static int fallbackCount = 0;
 
     @Service
     class FooService {
         @HystrixCommand(fallbackMethod = "barFallback")
-        public String bar() {
-            if (i < 10) {
-                i++;
-                return "123";
+        public void bar() {
+            if (successCount < 10) {
+                successCount++;
             } else {
+                // 调用失败次数达到阈值将开启熔断器，所有的请求直接fast-fail，不会再执行到此处
+                // 熔断时间窗后熔断器会调整为半开状态，此时允许一个请求通过，如果该请求还是失败，则重新回到开启状态
+                errorCount++;
                 throw new RuntimeException();
             }
         }
 
-        public String barFallback() {
-            return "error";
+        public void barFallback() {
+            fallbackCount++;
         }
     }
 
@@ -52,9 +56,13 @@ public class SimpleHystrixApplication {
         @Override
         public void afterPropertiesSet() throws Exception {
             System.out.println("----------begin test----------");
-            for (int i = 0; i < 20; i++) {
-                System.out.println(service.bar());
+            for (int i = 0; i < 10000; i++) {
+                service.bar();
             }
+
+            System.out.println("success count: " + successCount);
+            System.out.println("error count: " + errorCount);
+            System.out.println("fallback count: " + fallbackCount);
             System.out.println("----------end test----------");
         }
     }
